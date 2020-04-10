@@ -21,15 +21,18 @@ ${result}
 
 export default {
   name: 'Mdx',
-  inject: ['components'],
-  computed: {
-    components() {
-      console.log(this.components())
-      return this.components()
+  inject: {
+    $mdxComponents: {
+      default: () => ({})
     }
   },
-  render(vueCreateElement) {
-    h = mdx.bind({vueCreateElement})
+  computed: {
+    components() {
+      return this.$mdxComponents()
+    }
+  },
+  render(createElement) {
+    h = mdx.bind({ createElement, components: this.components })
     return MDXContent({ components: this.components })
   }
 }

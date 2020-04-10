@@ -1,14 +1,14 @@
 {
   "name": "mdx-vue-loader",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/es/index.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "license": "MIT",
   "files": [
-    "dist"
+    "src/*"
   ],
   "scripts": {
-    "dev": "watch 'yarn build:es' src",
+    "dev": "watch 'yarn build' src",
     "build": "yarn build:cjs && yarn build:es",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src -d dist --copy-files",
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d dist/es --copy-files"
