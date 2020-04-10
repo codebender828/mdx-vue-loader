@@ -4,30 +4,10 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "license": "MIT",
+  "author": "Jonathan Bakebwa <jonas@akkadu-team.com>",
   "files": [
     "src/*"
   ],
-  "scripts": {
-    "dev": "watch 'yarn build' src",
-    "build": "yarn build:cjs && yarn build:es",
-    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src -d dist --copy-files",
-    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src -d dist/es --copy-files"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "cross-env": "^7.0.2",
-    "watch": "^1.0.2"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "exclude": [
-      "node_modules"
-    ]
-  },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
     "loader-utils": "^2.0.0"
