@@ -14,7 +14,7 @@ module.exports = async function(content) {
     return callback(err);
   }
 
-  const code = `// vue babel plugin doesn't support the pragma replacement
+  const code = `// vue babel plugin doesn't support pragma replacement
 import { mdx } from 'mdx-vue'
 let h;
 ${result}
@@ -23,7 +23,7 @@ export default {
   name: 'Mdx',
   inject: {
     $mdxComponents: {
-      default: () => ({})
+      default: () => () => ({})
     }
   },
   computed: {
