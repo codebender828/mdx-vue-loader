@@ -10,6 +10,6 @@
   ],
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
-    "loader-utils": "^2.0.0"
+    "loader-utils": "^2.0.4"
   }
 }
